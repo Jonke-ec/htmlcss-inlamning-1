@@ -1,0 +1,59 @@
+#section-four {
+
+
+    .container {
+
+        @include center-content;
+        flex-direction: column;
+
+        .map-img {
+            width: 100%;
+            @include center-content;
+            position: absolute;
+            
+        }
+        
+        .content-four {
+            
+            @include center-content;
+            flex-direction: column;
+
+            h4 {
+                font-family: $font-poppins;
+                color: $color-htext;
+                font-size: 48px;
+                font-weight: 700;
+                width: 730px;
+                text-align: center;
+            }
+            p {
+                width: 515px;
+                text-align: center;
+            }
+        }
+
+        .info-numbers {
+            width: 970px;
+            display: flex;
+            justify-content: space-between;
+
+            .info-number {
+
+                .i-number {
+                    font-family: $font-poppins;
+                    font-size: 42px;
+                    font-weight: 600;
+                    color: $color-pink;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+
+            }
+        }
+        
+    }
+
+}
