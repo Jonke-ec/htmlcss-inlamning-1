@@ -1,0 +1,36 @@
+#navbar {
+    
+    .top-bg {
+        img {
+            position: absolute;
+        }
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    
+        .navbar-links {
+            display: flex;
+            align-items: center;
+    
+            .nav-links {
+                font-size: 17px;
+                font-weight: 500;
+    
+                .nav-link {
+                    text-decoration: none;
+                    color: $color-htext;
+                    margin: 0 25px;
+                }
+            }
+    
+            i {
+                margin-left: 5px;
+                margin-right: 30px;
+                font-size: 25px;
+            }
+        }
+    }
+}

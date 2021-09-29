@@ -1,0 +1,54 @@
+#section-one {
+    
+    overflow: hidden;
+    
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .content-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+
+        h1 {
+            font-size: 60px;
+            color: $color-htext;
+            font-family: $font-poppins;
+            font-weight: 700;
+        }
+
+        .btn {
+            align-self: flex-start;
+        }
+    }
+
+    .images {
+        
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        .triangle-shape-img {
+            position: absolute;
+            top: -12%;
+            left: 30%;
+        }
+
+        .circle-img {
+            position: relative;
+            left: 105%;
+            top: 15%;
+        }
+
+        .laptop-img {
+            position: relative;
+            left: 30%;
+            bottom: 10%;
+        }
+    }
+}
