@@ -1,8 +1,5 @@
 #section-four {
-
-
     .container {
-
         @include center-content;
         flex-direction: column;
 
@@ -10,50 +7,49 @@
             width: 100%;
             @include center-content;
             position: absolute;
-            
+            padding-top: 230px;
         }
         
         .content-four {
-            
             @include center-content;
             flex-direction: column;
-
-            h4 {
-                font-family: $font-poppins;
-                color: $color-htext;
-                font-size: 48px;
-                font-weight: 700;
-                width: 730px;
-                text-align: center;
-            }
-            p {
-                width: 515px;
-                text-align: center;
-            }
+            text-align: center;
+            width: 650px;
         }
 
         .info-numbers {
             width: 970px;
             display: flex;
             justify-content: space-between;
-
+            text-align: center;
             .info-number {
-
-                .i-number {
+                span {
                     font-family: $font-poppins;
                     font-size: 42px;
                     font-weight: 600;
                     color: $color-pink;
                 }
-
-                p {
-                    text-align: center;
-                }
-
-
             }
         }
-        
-    }
 
+        .contact {
+            position: relative;
+            background-color: #ffffff;
+            @include center-content;
+            justify-content: space-between;
+            border-radius: 10px;
+            width: 630px;
+            padding: 40px 40px;
+            box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+
+            .separate {
+                h3 {
+                    font-size: 21px;
+                    font-family: $font-poppins;
+                    font-weight: 600;
+                    color: $color-htext;
+                }
+            }
+        }
+    }
 }

@@ -1,34 +1,32 @@
 #section-one {
-    
     overflow: hidden;
     
     .container {
         position: relative;
         display: flex;
         justify-content: space-between;
-        
-    }
 
-    .content-one {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-
-        h1 {
-            font-size: 60px;
-            color: $color-htext;
-            font-family: $font-poppins;
-            font-weight: 700;
+        .content-one {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: auto;
+    
+            h1 {
+                font-size: 60px;
+                color: $color-htext;
+                font-family: $font-poppins;
+                font-weight: 700;
+            }
+    
+            .btn {
+                align-self: flex-start;
+            }
         }
 
-        .btn {
-            align-self: flex-start;
-        }
     }
 
     .images {
-        
         position: relative;
         width: 100%;
         height: auto;

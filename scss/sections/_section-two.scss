@@ -1,20 +1,11 @@
 #section-two {
-
     .container {
         display: flex;
         
         .content-two {
             width: 450px;
-
-            h2 {
-                width: 420px;
-                font-family: $font-poppins;
-                font-size: 48px;
-                color: $color-htext;
-                font-weight: 700;
-            }
         }
-
+    
         .icons {
             width: 50%;
             height: auto;
@@ -24,7 +15,7 @@
             grid-template-columns: 250px 250px;
             grid-template-rows: 250px 250px;
             
-            .poppins-text {
+            h3 {
                 font-family: $font-poppins;
                 font-size: 22px;
                 color: $color-htext;

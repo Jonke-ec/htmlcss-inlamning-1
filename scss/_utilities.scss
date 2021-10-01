@@ -12,6 +12,13 @@ html, body {
     line-height: 1.5;
 }
 
+h2 {
+    font-family: $font-poppins;
+    font-size: 48px;
+    color: $color-htext;
+    font-weight: 700;
+}
+
 .border {
     border: 1px solid $color-ptext;
 }
@@ -36,7 +43,7 @@ html, body {
 .btn {
     background-color: transparent;
     border: 1px solid transparent;
-    padding: 12px 24px;
+    padding: 15px 30px;
     border-radius: 5px;
     @include roboto-medium;
 }
@@ -49,6 +56,8 @@ html, body {
 .btn-gradients {
     background-image: linear-gradient(to right, $color-pink, $color-orange);
     color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 @each $amount in $space-amount {
