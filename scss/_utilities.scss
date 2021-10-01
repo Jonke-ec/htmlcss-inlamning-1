@@ -46,11 +46,16 @@ h2 {
     padding: 15px 30px;
     border-radius: 5px;
     @include roboto-medium;
+    transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 .btn-outline-orange {
     border-color: $color-orange;
     color: $color-htext;
+}
+.btn-outline-orange:hover {
+    background-color: $color-orange;
 }
 
 .btn-gradients {
@@ -58,6 +63,10 @@ h2 {
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 700;
+}
+.btn-gradients:hover {
+    background-image: linear-gradient(to right, $color-orange, $color-pink);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 @each $amount in $space-amount {
