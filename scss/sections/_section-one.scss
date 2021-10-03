@@ -1,9 +1,7 @@
 #section-one {
-    
     .container {
         display: flex;
         justify-content: center;
-        
         @include md {
             flex-direction: column-reverse;
         }
@@ -16,11 +14,9 @@
             position: relative;
             justify-content: space-between;
         }
-
         .content-one {
             text-align: center;
             margin-top: 10%;
-
             @include md {
                 margin-top: 40%;
                 display: flex;
@@ -36,7 +32,6 @@
                 margin-top: 0;
                 text-align: unset;
             }
-    
             h1 {
                 font-size: 25px;
                 color: $color-htext;
@@ -44,7 +39,6 @@
                 font-weight: 700;
                 width: 250px;
                 text-align: center;
-
                 @include md {
                     width: 400px;
                     font-size: 45px;
@@ -61,7 +55,6 @@
                     width: 600px;
                 }
             }
-
             p {
                 width: 250px;
                 text-align: center;
@@ -77,7 +70,6 @@
                     width: 500px;
                 }
             }
-    
             .btn {
                 align-self: center;
                 @include lg {
@@ -88,12 +80,9 @@
                 }
             }
         }
-
     }
-
     .images {
         display: none;
-        
         @include md {
             display: flex;
             margin-top: -5%;
@@ -114,11 +103,9 @@
             height: auto;
             margin-top: -35%;
         }
-
         .triangle-shape-img {
             display: none;
             z-index: -1;
-
             @include md {
                 display: flex;
                 justify-content: center;
@@ -138,15 +125,8 @@
                 }
             }
         }
-
         .circle-img {
             display: none;
-
-            @include lg {
-                display: none;
-                display: block;
-                position: relative;
-            }
             @include xl {
                 display: flex;
                 position: relative;
@@ -160,16 +140,13 @@
                 }
             }
         }
-
         .laptop-img {
             position: relative;
             display: flex;
             justify-content: center;
             top: 150px;
-
             @include lg {
-                top: 140px;
-                left: 50px;
+                top: 200px;
             }
             @include xl {
                 left: -8%;

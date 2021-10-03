@@ -1,8 +1,6 @@
 #navbar {
-    
     #bg-image {
         display: none;
-        
         @include xl {
             z-index: -1;
             display:block;
@@ -16,7 +14,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
         #logo {
             width: 230px;
             @include md {
@@ -26,34 +23,27 @@
                 width: auto;
             }
         }
-
         #menu-dropdown {
             @include lg {
                 display: none;
             }
         }
-
         .navbar-links {
             display: none;
-
             @include lg {
                 display: flex;
                 align-items: center;
             }
-            
             .nav-links {
                 font-size: 15px;
                 font-weight: 500;
-                
                 @include xl {
                     font-size: 17px;
                 }
-
                 .nav-link {
                     text-decoration: none;
                     color: $color-htext;
                     margin: 0 10px;
-
                     &:hover {
                         color: $color-orange;
                     }

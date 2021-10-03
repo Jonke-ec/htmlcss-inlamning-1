@@ -5,10 +5,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
-
         .black-box-img {
             display: none;
-
             @include xl {
                 display: block;
                 width: 100%;
@@ -17,7 +15,6 @@
                 margin-left: -10%;
             }
         }
-
         .content-three {
             display: flex;
             flex-direction: column;
@@ -31,7 +28,6 @@
                     margin-right: 50px;
                 }
             }
-            
             .grid-unit-one {
                 display: flex;
                 flex-direction: column;
@@ -57,7 +53,6 @@
                     margin-right: 20px;
                 }
             }
-
             h3 {
                 color: $color-htext;
                 font-family: $font-poppins;
