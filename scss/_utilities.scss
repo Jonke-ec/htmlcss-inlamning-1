@@ -6,17 +6,29 @@
 }
 
 html, body {
-    font-size: 18px;
+    line-height: 1.5;
     font-weight: 400;
     color: $color-ptext;
-    line-height: 1.5;
+    font-size: 15px;
+    @include md {
+        font-size: 18px;
+    }
 }
 
 h2 {
     font-family: $font-poppins;
-    font-size: 48px;
+    font-size: 22px;
     color: $color-htext;
     font-weight: 700;
+    @include md {
+        
+    }
+    @include lg {
+
+    }
+    @include xl {
+        font-size: 48px;
+    }
 }
 
 .border {
@@ -37,17 +49,19 @@ h2 {
     @include md { max-width: $breakpoint-md-max-width; }
     @include lg { max-width: $breakpoint-lg-max-width; }
     @include xl { max-width: $breakpoint-xl-max-width; }
-    @include xxl { max-width: $breakpoint-xxl-max-width; }
 }
 
 .btn {
     background-color: transparent;
     border: 1px solid transparent;
-    padding: 15px 30px;
+    padding: 10px 15px;
     border-radius: 5px;
     @include roboto-medium;
     transition-duration: 0.3s;
     cursor: pointer;
+    @include xl {
+        padding: 15px 30px;
+    }
 }
 
 .btn-outline-orange {
@@ -61,8 +75,14 @@ h2 {
 .btn-gradients {
     background-image: linear-gradient(to right, $color-pink, $color-orange);
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
+    @include lg {
+        font-size: 14px;
+    }
+    @include xl {
+        font-size: 16px;
+    }
 }
 .btn-gradients:hover {
     background-image: linear-gradient(to right, $color-orange, $color-pink);

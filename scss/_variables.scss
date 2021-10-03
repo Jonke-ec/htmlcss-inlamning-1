@@ -2,6 +2,8 @@
 $font-poppins: 'Poppins', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
 
+/* @import './mixins'; */
+
 $color-ptext: rgb(87, 100, 124);
 $color-htext: rgb(37, 37, 37);
 $color-pink: rgb(242, 55, 121);
@@ -9,12 +11,10 @@ $color-orange: rgb(255, 104, 3);
 
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;
+$breakpoint-xl: 1250px;
 
 $breakpoint-md-max-width: 720px;
 $breakpoint-lg-max-width: 960px;
 $breakpoint-xl-max-width: 1170px;
-$breakpoint-xxl-max-width: 1400px;
 
 $space-amount: (0, 1, 2, 3, 4 ,5);

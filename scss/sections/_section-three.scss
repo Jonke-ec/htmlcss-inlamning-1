@@ -1,47 +1,85 @@
 #section-three {
     margin-top: 10%;
-
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include xl {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
 
         .black-box-img {
-            width: 100%;
-            height: auto;
-            align-self: center;
-            margin-left: -20%;
+            display: none;
+
+            @include xl {
+                display: block;
+                width: 100%;
+                height: auto;
+                align-self: center;
+                margin-left: -10%;
+            }
         }
 
         .content-three {
-            .grid-unit-one {
-                display: grid;
-                grid-template-columns: 1fr 3fr;
-                grid-template-rows: 1fr;
-                grid-template-areas: 
-                    "a b b"
-                    "a c c";
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                width: 300px;
+                text-align: center;
+                @include xl {
+                    text-align: unset;
+                    width: 400px;
+                    margin-right: 50px;
+                }
             }
-
+            
+            .grid-unit-one {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include md {
+                    display: grid;
+                    grid-template-columns: 1fr 3fr;
+                    grid-template-rows: 1fr;
+                    grid-template-areas: 
+                        "a b b"
+                        "a c c";
+                }
+            }
             span {
                 color: $color-pink;
                 font-family: $font-poppins;
-                font-size: 60px;
+                font-size: 40px;
                 font-weight: 700;
-                grid-area: a;
-                margin-top: -15px;
+                @include xl {
+                    font-size: 60px;
+                    grid-area: a;
+                    margin-top: -70px;
+                    margin-right: 20px;
+                }
             }
 
             h3 {
                 color: $color-htext;
                 font-family: $font-poppins;
                 font-weight: 600;
-                font-size: 24px;
-                grid-area: b;
+                font-size: 18px;
+                @include xl {
+                    font-size: 24px;
+                    grid-area: b;
+                }
             }
-
             p {
                 width: 350px;
                 grid-area: c;
+                text-align: center;
+                @include md {
+                    text-align: unset;
+                }
+                @include xl {
+                    width: 350px;
+                    grid-area: c;
+                    text-align: unset;
+                }
             }
         }
     }

@@ -1,51 +1,189 @@
 #section-one {
-    overflow: hidden;
+    
     .container {
-        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        
+        @include md {
+            flex-direction: column-reverse;
+        }
+        @include lg {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 10%;
+        }
+        @include xl {
+            position: relative;
+            justify-content: space-between;
+        }
 
         .content-one {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: auto;
+            text-align: center;
+            margin-top: 10%;
+
+            @include md {
+                margin-top: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-self: center;
+            }
+            @include lg {
+                margin-top: 10%;
+                text-align: unset;
+            }
+            @include xl {
+                margin-top: 0;
+                text-align: unset;
+            }
     
             h1 {
-                font-size: 60px;
+                font-size: 25px;
                 color: $color-htext;
                 font-family: $font-poppins;
                 font-weight: 700;
+                width: 250px;
+                text-align: center;
+
+                @include md {
+                    width: 400px;
+                    font-size: 45px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                @include lg {
+                    font-size: 30px;
+                    text-align: unset;
+                    width: 400px;
+                }
+                @include xl {
+                    font-size: 60px;
+                    width: 600px;
+                }
+            }
+
+            p {
+                width: 250px;
+                text-align: center;
+                align-self: center;
+                @include md {
+                    text-align: center;
+                }
+                @include lg {
+                    align-self: unset;
+                    text-align: unset;
+                }
+                @include lg {
+                    width: 500px;
+                }
             }
     
             .btn {
-                align-self: flex-start;
+                align-self: center;
+                @include lg {
+                    align-self: flex-start;
+                }
+                @include xl {
+                    align-self: flex-start;
+                }
             }
         }
 
     }
 
     .images {
-        position: relative;
-        width: 100%;
-        height: auto;
+        display: none;
+        
+        @include md {
+            display: flex;
+            margin-top: -5%;
+        }
+        @include lg {
+            justify-content: center;
+            display: block;
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: -20%;
+        }
+        @include xl {
+            justify-content: center;
+            display: block;
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: -35%;
+        }
 
         .triangle-shape-img {
-            position: absolute;
-            top: -12%;
-            left: 30%;
+            display: none;
+            z-index: -1;
+
+            @include md {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+            }
+            @include lg {
+                top: 10%;
+                left: -5%;
+            }
+            img {
+                width: 80%;
+                @include lg {
+                    width: 160%;
+                }
+                @include xl {
+                    width: auto;
+                }
+            }
         }
 
         .circle-img {
-            position: relative;
-            left: 105%;
-            top: 15%;
+            display: none;
+
+            @include lg {
+                display: none;
+                display: block;
+                position: relative;
+            }
+            @include xl {
+                display: flex;
+                position: relative;
+                left: 67%;
+                top: 34%;
+            }
+            img {
+                width: 10%;
+                @include xl {
+                    width: auto;
+                }
+            }
         }
 
         .laptop-img {
             position: relative;
-            left: 30%;
-            bottom: 10%;
+            display: flex;
+            justify-content: center;
+            top: 150px;
+
+            @include lg {
+                top: 140px;
+                left: 50px;
+            }
+            @include xl {
+                left: -8%;
+                top: 10%;
+            }
+            img {
+                width: 55%;
+                @include lg {
+                    width: 100%;
+                }
+                @include xl {
+                    width: auto;
+                }
+            }
         }
     }
 }

@@ -1,41 +1,111 @@
 #section-five {
+    
     .container {
-        margin-top: 200px;
-        @include center-content;
-        flex-direction: column;
+        align-items: center;
+        
 
-        .content-five {
+        @include md {
+
+        }
+        @include xl {
+            margin-top: 200px;
             @include center-content;
             flex-direction: column;
-            width: 550px;
-            text-align: center;
         }
 
-        .boxes {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 100%;
-            height: auto;
-            .box {
-                box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+        .content-five {
+            text-align: center;
+            margin-top: 10%;
 
+            @include xl {
+                @include center-content;
+                flex-direction: column;
+                width: 550px;
+                margin-top: 0;
+            }
+        }
+
+
+        .boxes {
+            margin-top: 10%;
+
+            @include lg {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: auto;
+                margin-top: 0;
+                column-gap: 2%;
+            }
+            @include xl {
+                justify-content: space-evenly;
+                margin-top: 0;
+                column-gap: 5%;
+            }
+            .box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 15%;
+
+                @include lg {
+                    
+                    margin-bottom: 10%;
+                    box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+                }
+                @include xl {
+                    display: unset;
+                    flex-direction: unset;
+                    align-items: unset;
+                    margin-bottom: 0;
+                    box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+                }
                 .content-text {
-                    width: 330px;
-                    margin-left: 30px;
+                    @include xl {
+                        width: 330px;
+                        margin-left: 30px;
+                    }
 
                     .orange-text {
                         font-family: $font-poppins;
                         color: #FF6803;
-                        font-size: 14px;
+                        font-size: 10px;
                         font-weight: 400;
+                        @include md {
+                            font-size: 12px;
+                        }
+                        @include lg {
+                            font-size: 14px;
+                        }
                     }
 
                     h3 {
-                        font-size: 22px;
+                        font-size: 18px;
                         font-family: $font-poppins;
                         color: $color-htext;
                         font-weight: 700;
+                        width: 250px;
+                        @include xl {
+                            font-size: 22px;
+                        }
+                    }
+
+                    p {
+                        width: 250px;
+                    }
+                }
+
+                img {
+                    width: 70%;
+                    
+                    @include md {
+                        width: 40%;
+                    }
+                    @include lg {
+                        width: 100%;
+                    }
+                    @include xl {
+                        width: auto;
                     }
                 }
             }

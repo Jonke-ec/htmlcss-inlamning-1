@@ -1,53 +1,173 @@
 #section-four {
+    
     .container {
-        @include center-content;
-        flex-direction: column;
+        
+        @include md {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include lg {
+            @include center-content;
+        }
 
         .map-img {
-            width: 100%;
-            @include center-content;
-            position: absolute;
-            padding-top: 230px;
+            display: none;
+            z-index: -1;
+            @include lg {
+                @include center-content;
+                position: absolute;
+                padding-top: 100px;
+            }
+            @include xl {
+                width: auto;
+                @include center-content;
+                position: absolute;
+                padding-top: 250px;
+            }
         }
         
         .content-four {
-            @include center-content;
+            display: flex;
             flex-direction: column;
-            text-align: center;
-            width: 650px;
+
+            @include md {
+                align-items: center;
+                width: 500px;
+            }
+            @include lg {
+                @include center-content;
+                flex-direction: column;
+                text-align: center;
+                width: 650px;
+            }
+
+            h2 {
+                text-align: center;
+
+                @include md {
+                    width: 300px;
+                }
+                @include lg {
+                    text-align: unset;
+                }
+                @include md {
+                    width: 700px;
+                }
+            }
+            p {
+                text-align: center;
+                @include lg {
+                    text-align: unset;
+                }
+            }
         }
 
         .info-numbers {
-            width: 970px;
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+            @include md {
+                row-gap: 10%;
+                column-gap: 30%;
+                margin-left: -10%;
+            }
+
+            @include lg {
+                width: 300px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin-left: 0;
+            }
+            @include xl {
+                width: 970px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                column-gap: 10%;
+            }
             .info-number {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include lg {
+
+                }
                 span {
-                    font-family: $font-poppins;
-                    font-size: 42px;
                     font-weight: 600;
                     color: $color-pink;
+                    font-family: $font-poppins;
+                    font-size: 18px;
+                    
+                    @include lg {
+                        font-size: 22px;
+                    }
+                    @include xl {
+                        font-size: 42px;
+                        width: 200px;
+                    }
                 }
             }
         }
 
         .contact {
-            position: relative;
-            background-color: #ffffff;
-            @include center-content;
-            justify-content: space-between;
-            border-radius: 10px;
-            width: 630px;
-            padding: 40px 40px;
-            box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+            display: flex;
+            flex-direction: column;
+
+            @include lg {
+                background-color: #ffffff;
+                border-radius: 10px;
+                width: 450px;
+                padding-bottom: 30px;
+                padding-top: 10px;
+                box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+            }
+            @include xl {
+                margin-top: 6%;
+                flex-direction: row;
+                justify-content: space-between;
+                border-radius: 10px;
+                width: 750px;
+                padding: 40px 40px;
+                box-shadow: 2px 3px 20px rgba(112, 112, 112, 0.24);
+            }
 
             .separate {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 5%;
+
+                @include xl {
+                    align-items: unset;
+                    margin-top: 0;
+                }
+
                 h3 {
-                    font-size: 21px;
                     font-family: $font-poppins;
                     font-weight: 600;
                     color: $color-htext;
+                    font-size: 16px;
+                    @include lg {
+                        font-size: 21px;
+                    }
+                }
+            }
+
+            button {
+                display: flex;
+                align-self: center;
+                margin-top: 5%;
+                
+                @include lg {
+                    display: unset;
+                    margin-top: 10;
+                }
+                @include xl {
+                    margin-top: 0;
                 }
             }
         }

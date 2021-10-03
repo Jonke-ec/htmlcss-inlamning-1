@@ -1,24 +1,81 @@
 #section-two {
+    
     .container {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -3%;
+        @include lg {
+            flex-direction: row;
+        }
+
         .content-two {
-            width: 450px;
+            width: 250px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0;
+            margin-top: 15%;
+
+            @include md {
+                margin-top: 10%;
+            }
+            @include lg {
+                margin-top: 20%;
+            }
+            @include xl {
+                width: 450px;
+                text-align: unset;
+            }
+
+            button {
+                @include xl {
+                    align-self: flex-start;
+                }
+            }
         }
     
         .icons {
-            width: 50%;
-            height: auto;
+            margin-top: 20%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             display: grid;
-            grid-template-columns: 250px 250px;
-            grid-template-rows: 250px 250px;
+            grid-template-columns: 250px;
+            grid-template-rows: 250px 250px 250px 250px;
+
+            @include md {
+                grid-template-columns: 250px 250px;
+                grid-template-rows: 250px 250px;
+            }
+            @include lg {
+                margin-left: 10%;
+                grid-template-columns: 250px 250px;
+                grid-template-rows: 250px 250px;
+            }
+
+            @include xl {
+                width: 50%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 250px 250px;
+                grid-template-rows: 250px 250px;
+            }
             
             h3 {
                 font-family: $font-poppins;
                 font-size: 22px;
                 color: $color-htext;
                 font-weight: 700;
+            }
+
+            p {
+                width: 200px;
+                @include md {
+
+                }
             }
         }
     }
